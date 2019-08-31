@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai4</title>
+</head>
+<body>
+<canvas id="myCanvas" width="500" height="500" style="border: 2px solid red"></canvas>
+<script>
+    let Rectangle = function (x, y, width, heigth, color) {
+        this.canvas = document.getElementById("myCanvas");
+        this.x = x;
+        this.y = y;
+        this.width = width;
+        this.height = heigth;
+        this.color = color;
+        this.render = function () {
+            this.ctx = this.canvas.getContext('2d');
+            this.ctx.beginPath();
+            this.ctx.fillStyle = this.color;
+            this.ctx.fillRect(this.x, this.y, this.width, this.height, this.color);
+        };
+    };
+    let toaDoX = 10;
+    let toaDoY = 10;
+    let chieuRong = 200;
+    let chieuCao = 100;
+    let mauSac = "#000000";
+    let recTangle = new Rectangle(toaDoX, toaDoY, chieuRong, chieuCao, mauSac);
+    recTangle.render();
+
+</script>
+
+</body>
+</html>

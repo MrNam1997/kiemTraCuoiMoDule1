@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai3</title>
+</head>
+<body>
+<script>
+    function printFibonacci(n) {
+        let temp,
+            number1 = 0,
+            number2 = 1;
+
+        while (number1 < n) {
+            temp = number2;
+            number2 += number1;
+            number1 = temp;
+            n--;
+            document.write(number1 + "<br>");
+        }
+    }
+
+    let numberFibonacci = Number(prompt("Nhap N:"));
+    printFibonacci(numberFibonacci);
+</script>
+
+</body>
+</html>
